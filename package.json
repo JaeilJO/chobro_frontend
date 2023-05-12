@@ -20,10 +20,11 @@
     },
     "devDependencies": {
         "@storybook/addon-essentials": "^7.0.10",
-        "@storybook/addon-interactions": "^7.0.10",
+        "@storybook/addon-interactions": "^7.0.11",
         "@storybook/addon-links": "^7.0.10",
         "@storybook/addon-styling": "^1.0.7",
         "@storybook/blocks": "^7.0.10",
+        "@storybook/jest": "^0.1.0",
         "@storybook/nextjs": "^7.0.10",
         "@storybook/react": "^7.0.10",
         "@storybook/testing-library": "^0.0.14-next.2",
