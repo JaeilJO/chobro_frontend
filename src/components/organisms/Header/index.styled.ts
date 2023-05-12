@@ -10,6 +10,7 @@ const S = {
     Header: styled.header`
         min-width: 100%;
         border-bottom: 1px solid ${({ theme }) => theme.LIGHT.COLOR.GRAY};
+        padding: 10px;
     `,
 
     HeaderContents: styled.div`

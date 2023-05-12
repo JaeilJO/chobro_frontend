@@ -10,12 +10,11 @@ const S = {
     Navigation: styled.ul<NavigationStyleProps>`
         list-style: none;
         display: flex;
-        height: 57px;
+        height: 50px;
         align-items: center;
 
         gap: 3em;
 
-        padding: 1em;
         justify-content: ${({ justify_content }) => justify_content};
     `,
     NaviationLi: styled.li`
