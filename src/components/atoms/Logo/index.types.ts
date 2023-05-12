@@ -1,5 +1,6 @@
+import { FontSizeType } from '../../../styles/theme';
+
 export interface LogoProps {
-  width: number;
-  height: number;
-  text: string;
+    font_size: FontSizeType;
+    text: string;
 }

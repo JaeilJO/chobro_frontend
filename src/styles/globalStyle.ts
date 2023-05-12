@@ -1,10 +1,10 @@
-import { createGlobalStyle } from "styled-components";
-import { Roboto } from "next/font/google";
+import { createGlobalStyle } from 'styled-components';
+import { Roboto } from 'next/font/google';
 
 // Setting ROBOTO font
 const ROBOTO_FONT = Roboto({
-  weight: ["300", "500", "700"],
-  subsets: ["cyrillic", "greek", "latin"],
+    weight: ['300', '500', '700'],
+    subsets: ['cyrillic', 'greek', 'latin'],
 });
 
 // Setting GlobalStyles

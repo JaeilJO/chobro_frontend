@@ -1,12 +1,8 @@
-import { LogoProps } from "./index.types";
-import S from "./index.style";
+import { LogoProps } from './index.types';
+import S from './index.styled';
 
-const Logo = ({ width, height, text }: LogoProps) => {
-  return (
-    <S.Logo width={width} height={height}>
-      {text}
-    </S.Logo>
-  );
+const Logo = ({ font_size, text }: LogoProps) => {
+    return <S.Logo font_size={font_size}>{text}</S.Logo>;
 };
 
 export default Logo;
