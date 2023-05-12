@@ -1,6 +1,6 @@
 import { DefaultTheme } from "styled-components";
 
-// All key names should be in uppercase!
+// All key names should be in uppercase
 
 //Light Mode
 const lightTheme = {
