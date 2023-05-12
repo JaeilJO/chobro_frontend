@@ -8,7 +8,7 @@ const Navigation = ({ active_link, justify_content }: NavigationProps) => {
         <S.Navigation justify_content={justify_content}>
             {navigationItems.map((item) => (
                 <S.NaviationLi key={item.id}>
-                    <NavigationLink active_link={active_link} text={item.text} href={item.href} />
+                    <NavigationLink active_link={active_link === item.href} text={item.text} href={item.href} />
                 </S.NaviationLi>
             ))}
         </S.Navigation>

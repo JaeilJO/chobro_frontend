@@ -12,8 +12,8 @@ const S = {
         display: flex;
         height: 57px;
         align-items: center;
-        border-bottom: 1px solid ${({ theme }) => theme.LIGHT.COLOR.GRAY};
-        gap: 2em;
+
+        gap: 3em;
 
         padding: 1em;
         justify-content: ${({ justify_content }) => justify_content};
