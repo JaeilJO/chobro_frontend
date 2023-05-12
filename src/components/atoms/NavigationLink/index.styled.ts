@@ -8,7 +8,7 @@ interface NavigationLinkProps {
 
 const S = {
     NavigationLink: styled(Link)<NavigationLinkProps>`
-        color: ${({ theme, $active_link }) => ($active_link ? theme.LIGHT.COLOR.GRAY : theme.LIGHT.COLOR.PRIMARY)};
+        color: ${({ theme, $active_link }) => ($active_link ? theme.LIGHT.COLOR.PRIMARY : theme.LIGHT.COLOR.GRAY)};
         font-weight: ${({ theme }) => theme.LIGHT.FONT_WEIGHT.BOLD};
         font-size: ${({ theme }) => theme.LIGHT.FONT_SIZE.XL};
         text-decoration: none;

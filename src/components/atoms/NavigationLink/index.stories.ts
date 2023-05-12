@@ -15,6 +15,7 @@ export const Default: Story = {
     args: {
         text: 'ACTIVE',
         href: '/active',
+        active_link: true,
     },
 };
 
@@ -22,5 +23,6 @@ export const InactiveLink: Story = {
     args: {
         text: 'INACTIVE',
         href: '/inactive',
+        active_link: false,
     },
 };
