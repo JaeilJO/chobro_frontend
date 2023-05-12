@@ -1,7 +1,7 @@
-import { LogoProps } from './index.types';
+import { ButtonProps } from './index.types';
 import S from './index.styled';
 
-const Button = ({ font_size, text, width, height, outline }: LogoProps) => {
+const Button = ({ font_size, text, width, height, outline }: ButtonProps) => {
     if (outline) {
         return (
             <S.OutlineButton width={width} height={height} font_size={font_size}>

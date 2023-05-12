@@ -3,7 +3,6 @@ import { within, userEvent, getByText } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
 import Button from '.';
-import theme from '../../../styles/theme';
 
 const meta: Meta<typeof Button> = {
     title: 'Button',
@@ -17,6 +16,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
     args: {
         text: 'Button',
+        font_size: 'XXXL',
     },
 };
 

@@ -1,6 +1,6 @@
 import { FontSizeType } from '../../../styles/theme';
 
-export interface LogoProps {
+export interface ButtonProps {
     font_size: FontSizeType;
     width?: number;
     height?: number;

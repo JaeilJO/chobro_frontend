@@ -1,0 +1,28 @@
+import { styled } from 'styled-components';
+import { FontSizeType } from '../../../styles/theme';
+import Link from 'next/link';
+
+interface NavigationStyleProps {
+    justify_content: `flex-start` | `flex-end` | `center` | `space-between`;
+}
+
+const S = {
+    Navigation: styled.ul<NavigationStyleProps>`
+        list-style: none;
+        display: flex;
+        height: 57px;
+        align-items: center;
+        border-bottom: 1px solid ${({ theme }) => theme.LIGHT.COLOR.GRAY};
+        gap: 2em;
+
+        padding: 1em;
+        justify-content: ${({ justify_content }) => justify_content};
+    `,
+    NaviationLi: styled.li`
+        height: 100%;
+        display: flex;
+        align-items: center;
+    `,
+};
+
+export default S;

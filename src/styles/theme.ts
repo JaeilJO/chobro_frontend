@@ -39,7 +39,7 @@ const defaultTheme = {
 //Theme Types
 export type LightColorType = typeof lightTheme;
 export type DarkColorType = typeof darkTheme;
-export type FontSizeType = typeof defaultTheme.FONT_SIZE;
+export type FontSizeType = keyof typeof defaultTheme.FONT_SIZE;
 export type FontWeightType = typeof defaultTheme.FONT_WEIGHT;
 
 // Theme
