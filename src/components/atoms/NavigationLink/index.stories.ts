@@ -13,7 +13,14 @@ type Story = StoryObj<typeof NavigationLink>;
 
 export const Default: Story = {
     args: {
-        text: 'JoBro',
-        href: '/',
+        text: 'ACTIVE',
+        href: '/active',
+    },
+};
+
+export const InactiveLink: Story = {
+    args: {
+        text: 'INACTIVE',
+        href: '/inactive',
     },
 };

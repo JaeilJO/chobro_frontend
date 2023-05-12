@@ -4,7 +4,8 @@ import { DefaultTheme } from 'styled-components';
 
 //Light Mode
 const lightTheme = {
-    PRIMARY: '#0061A8',
+    PRIMARY: '#0080ff',
+    PRIMARY_FOCUS: '#006deb',
     SECOND: '#4E9AD2',
     THIRD: '#BEDAEF',
     BLACK: '#2F2F2F',
