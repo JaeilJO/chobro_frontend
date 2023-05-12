@@ -9,12 +9,12 @@ import {
 
 declare module "styled-components" {
   export interface DefaultTheme {
-    Light: {
+    LIGHT: {
       COLOR: LightColorType;
       FONT_SIZE: FontSizeTypes;
       FONT_WEIGHT: FontWeightTypes;
     };
-    Dark: {
+    DARK: {
       COLOR: DarkColorType;
       FONT_SIZE: FontSizeTypes;
       FONT_WEIGHT: FontWeightTypes;

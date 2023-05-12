@@ -9,10 +9,10 @@ export const decorators = [
   withThemeFromJSXProvider({
     // Set Theme of Styled-Components on Storybook
     themes: {
-      light: theme.Light,
-      dark: theme.Dark,
+      LIGHT: theme,
+      DARK: theme,
     },
-    defaultTheme: "light",
+    defaultTheme: "LIGHT",
     Provider: ThemeProvider,
 
     // Set GlobalStyle of Styled-Components on Storybook

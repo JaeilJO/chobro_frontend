@@ -42,11 +42,11 @@ export type FontWeightType = typeof defaultTheme.FONT_WEIGHT;
 
 // Theme
 const theme: DefaultTheme = {
-  Light: {
+  LIGHT: {
     COLOR: lightTheme,
     ...defaultTheme,
   },
-  Dark: {
+  DARK: {
     COLOR: darkTheme,
     ...defaultTheme,
   },
