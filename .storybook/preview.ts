@@ -4,6 +4,7 @@ import GlobalStyles from '../src/styles/globalStyle';
 import { ThemeProvider } from 'styled-components';
 
 import theme from '../src/styles/theme';
+import { Provider } from 'react-redux';
 
 export const decorators = [
     withThemeFromJSXProvider({
