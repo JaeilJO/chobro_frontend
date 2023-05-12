@@ -7,6 +7,7 @@ const lightTheme = {
     PRIMARY: '#0080ff',
     PRIMARY_FOCUS: '#006deb',
     SECOND: '#4E9AD2',
+    SECOND_FOCUS: '#4182b0',
     THIRD: '#BEDAEF',
     BLACK: '#2F2F2F',
     GRAY: '#F0F0F0',
