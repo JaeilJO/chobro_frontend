@@ -6,5 +6,6 @@ export interface ButtonProps {
     height?: number;
     text: string;
     outline: boolean;
+    display?: 'block' | 'inline' | 'inline-block';
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

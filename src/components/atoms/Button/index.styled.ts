@@ -6,6 +6,7 @@ interface ButtonStyleProps {
     font_size?: FontSizeType;
     width?: number;
     height?: number;
+    display?: 'block' | 'inline' | 'inline-block';
 }
 
 const CommonButtonStyle = styled.button<ButtonStyleProps>`
@@ -15,8 +16,8 @@ const CommonButtonStyle = styled.button<ButtonStyleProps>`
     border-radius: 0.3em;
     padding: 0.5em;
     transition: 280ms;
-
     cursor: pointer;
+    display: ${({ display }) => display};
 
     &:hover {
         background-color: ${({ theme }) => theme.LIGHT.COLOR.SECOND_FOCUS};

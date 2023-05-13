@@ -12,9 +12,7 @@ const S = {
         display: flex;
         height: 50px;
         align-items: center;
-
         gap: 3em;
-
         justify-content: ${({ justify_content }) => justify_content};
     `,
     NaviationLi: styled.li`
