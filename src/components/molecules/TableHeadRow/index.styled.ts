@@ -1,3 +1,4 @@
+import { BsChevronDown } from 'react-icons/bs';
 import { styled } from 'styled-components';
 
 interface TableHeadDataProps {
@@ -14,6 +15,9 @@ const S = {
         vertical-align: middle;
         font-size: ${({ theme }) => theme.LIGHT.FONT_SIZE.LG};
         border-bottom: 1px solid ${({ theme }) => theme.LIGHT.COLOR.GRAY};
+    `,
+    TableHeadIcon: styled(BsChevronDown)`
+        margin-left: 10px;
     `,
 };
 

@@ -1,5 +1,6 @@
 import S from './index.styled';
 import { HeadItemType } from './index.types';
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 
 const TableHeadRow = () => {
     const thead_items: HeadItemType[] = [
@@ -14,7 +15,7 @@ const TableHeadRow = () => {
             {thead_items.map((item) => (
                 <S.TableHeadData key={item.id} text_align={item.text_align}>
                     {item.title}
-                    {item.column_sorting ? '[Icon]' : ''}
+                    {item.column_sorting ? <BsChevronDown /> : ''}
                 </S.TableHeadData>
             ))}
         </S.TableHeadRow>
