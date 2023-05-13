@@ -6,7 +6,7 @@ const TableForm = () => {
     return (
         <S.TableForm>
             <S.TableFormTd colSpan={4}>
-                <S.TableInput placeholder="Please Enther URL" />
+                <S.TableInput placeholder="Please Enter URL" />
             </S.TableFormTd>
             <S.TableFormTd>
                 <Button font_size={'LG'} text={'Submit'} outline={false} is_loading={false} width={150} />
