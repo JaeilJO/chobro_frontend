@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
 import { FontSizeType } from '../../../styles/theme';
 import Link from 'next/link';
 
@@ -31,6 +31,11 @@ const S = {
         height: 30px;
         border-radius: 5em;
         cursor: pointer;
+
+        animation-name: ${({ percentage }) => keyframes`from{width:0%} to{width:${percentage}%}`};
+        animation-duration: 0.8s;
+        animation-iteration-count: 1;
+
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
                 rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
