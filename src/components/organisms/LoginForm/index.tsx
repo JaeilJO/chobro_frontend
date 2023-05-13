@@ -14,11 +14,11 @@ const LoginForm = () => {
             <AuthInput type="password" placeholder="Password" />
 
             {/* Login Button */}
-            <Button font_size="XXL" text="LOGIN" outline={false} />
+            <Button is_loading={false} font_size="XXL" text="LOGIN" outline={false} />
 
             <S.FormSeparator>or</S.FormSeparator>
 
-            <Button font_size="XXL" text="Google Login" outline={true} />
+            <Button is_loading={false} font_size="XXL" text="Google Login" outline={true} />
             <S.SignUpPormpt>
                 <S.SignUpPormptText>Don't have an account?</S.SignUpPormptText>
                 <S.SignUpPormptButton>Sign up</S.SignUpPormptButton>
