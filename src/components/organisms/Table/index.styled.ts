@@ -3,6 +3,8 @@ import { styled } from 'styled-components';
 const S = {
     Table: styled.table`
         width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
     `,
     Thead: {
         TR: styled.tr`

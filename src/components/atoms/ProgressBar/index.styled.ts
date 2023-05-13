@@ -13,8 +13,10 @@ interface ProgressToolTipProps {
 
 const S = {
     ProgressBar: styled.div`
+        position: relative;
         background-color: ${({ theme }) => theme.LIGHT.COLOR.GRAY};
-        height: 30px;
+        width: 100%;
+        height: 10px;
         border-radius: 5em;
     `,
 
@@ -26,9 +28,9 @@ const S = {
                 : progress_status === 'warn'
                 ? theme.LIGHT.COLOR.WARNING
                 : theme.LIGHT.COLOR.DANGER};
-        height: 100%;
+
         width: ${({ percentage }) => percentage}%;
-        height: 30px;
+        height: 10px;
         border-radius: 5em;
         cursor: pointer;
 

@@ -8,7 +8,7 @@ const TableHeadRow = () => {
         { id: 2, title: 'Certificate', column_sorting: true },
         { id: 3, title: 'Expiration Date', column_sorting: true },
         { id: 4, title: 'Acitve', text_align: 'center' },
-        { id: 5, title: 'Progress' },
+        { id: 5, title: 'Progress', text_align: 'center' },
     ];
     return (
         <S.TableHeadRow>
