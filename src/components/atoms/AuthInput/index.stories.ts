@@ -6,7 +6,7 @@ import AuthInput from '.';
 import theme from '../../../styles/theme';
 
 const meta: Meta<typeof AuthInput> = {
-    title: 'AuthInput',
+    title: 'Atoms/AuthInput',
     component: AuthInput,
 };
 

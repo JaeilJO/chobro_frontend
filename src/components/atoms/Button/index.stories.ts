@@ -5,7 +5,7 @@ import { expect } from '@storybook/jest';
 import Button from '.';
 
 const meta: Meta<typeof Button> = {
-    title: 'Button',
+    title: 'Atoms/Button',
     component: Button,
 };
 

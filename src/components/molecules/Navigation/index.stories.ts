@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Navigation from '.';
 
 const meta: Meta<typeof Navigation> = {
-    title: 'Navigation',
+    title: 'Molecules/Navigation',
     component: Navigation,
 };
 

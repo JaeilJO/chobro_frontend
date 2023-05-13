@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { wrapper } from '../../../redux/store';
 
 const meta: Meta<typeof Header> = {
-    title: 'Header',
+    title: 'Organisms/Header',
     component: Header,
 };
 

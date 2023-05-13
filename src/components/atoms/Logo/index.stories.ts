@@ -6,7 +6,7 @@ import Logo from '.';
 import theme from '../../../styles/theme';
 
 const meta: Meta<typeof Logo> = {
-    title: 'Logo',
+    title: 'Atoms/Logo',
     component: Logo,
 };
 

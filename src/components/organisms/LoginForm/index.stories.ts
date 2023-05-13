@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import LoginForm from '.';
 
 const meta: Meta<typeof LoginForm> = {
-    title: 'LoginForm',
+    title: 'Organisms/LoginForm',
     component: LoginForm,
 };
 

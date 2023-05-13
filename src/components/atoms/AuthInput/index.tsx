@@ -20,7 +20,15 @@ const AuthInput = ({ type, placeholder }: AuthInpuProps) => {
     return (
         <S.AuthInputBox>
             <S.AuthLabel $active={active}>{placeholder}</S.AuthLabel>
-            <S.AuthInput required type={type} $active={active} ref={inputRef} onFocus={onFocus} onBlur={onBlur} />
+            <S.AuthInput
+                data-testid={placeholder}
+                required
+                type={type}
+                $active={active}
+                ref={inputRef}
+                onFocus={onFocus}
+                onBlur={onBlur}
+            />
         </S.AuthInputBox>
     );
 };
