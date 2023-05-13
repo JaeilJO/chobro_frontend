@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import TableMockDatas from './TableMockDatas';
+
 import S from './index.styled';
 import React from 'react';
-import ProgressBar from '../../atoms/ProgressBar';
+
 import TableForm from '../../molecules/TableForm';
 import TableHeadRow from '../../molecules/TableHeadRow';
 import TableBodyRow from '../../molecules/TableBodyRow';
@@ -39,7 +39,7 @@ const Table = ({ table_data }) => {
                     //현재 페이지가 아니면 보여지지 않는 조건
                     if (idx + 1 === currentTable) {
                         return (
-                            <React.Fragment>
+                            <React.Fragment key={idx}>
                                 {page.map((table_datas: TableBodyRowProps) => (
                                     <TableBodyRow
                                         url={table_datas.url}

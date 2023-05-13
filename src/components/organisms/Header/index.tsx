@@ -1,11 +1,13 @@
-import { toggleHeaderLoginButtonModal } from '../../../redux/features/modalSlice';
-import { useAppDispatch } from '../../../redux/hooks';
+import { useRouter } from 'next/router';
+
 import Button from '../../atoms/Button';
 import Logo from '../../atoms/Logo';
 import Navigation from '../../molecules/Navigation';
 import S from './index.styled';
 
 const Header = () => {
+    const router = useRouter();
+
     return (
         <S.Header>
             <S.HeaderContents>
@@ -16,7 +18,7 @@ const Header = () => {
 
                 {/* Navigation */}
                 <S.HeaderContent justify_content={'flex-end'} flex_grow={1} margin="0 30px 0 0">
-                    <Navigation active_link={'/active'} justify_content="flex-end" />
+                    <Navigation active_link={router.asPath} justify_content="flex-end" />
                 </S.HeaderContent>
 
                 {/* Button */}
