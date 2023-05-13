@@ -7,7 +7,7 @@ import S from './index.styled';
 
 const Header = () => {
     const router = useRouter();
-
+    const active_link = router.asPath;
     return (
         <S.Header>
             <S.HeaderContents>
@@ -18,7 +18,7 @@ const Header = () => {
 
                 {/* Navigation */}
                 <S.HeaderContent justify_content={'flex-end'} flex_grow={1} margin="0 30px 0 0">
-                    <Navigation active_link={router.asPath} justify_content="flex-end" />
+                    <Navigation active_link={active_link} justify_content="flex-end" />
                 </S.HeaderContent>
 
                 {/* Button */}

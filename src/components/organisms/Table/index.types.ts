@@ -1,4 +1,5 @@
-export interface LoginFormProps {
-    active_link: string;
-    justify_content: `flex-start` | `flex-end` | `center` | `space-between`;
+import { TableBodyRowProps } from '../../molecules/TableBodyRow/index.types';
+
+export interface TableProps {
+    table_data: TableBodyRowProps;
 }

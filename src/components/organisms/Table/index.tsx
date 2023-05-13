@@ -7,15 +7,19 @@ import TableForm from '../../molecules/TableForm';
 import TableHeadRow from '../../molecules/TableHeadRow';
 import TableBodyRow from '../../molecules/TableBodyRow';
 import { TableBodyRowProps } from '../../molecules/TableBodyRow/index.types';
+import { TableProps } from './index.types';
 
-const Table = ({ table_data }) => {
+const Table = ({ table_data }: TableProps) => {
     const [currentTable, setCurrentTable] = useState(1);
 
     const makePages = (data: any, NumberOfPageContent: any) => {
         let pages = [];
 
         for (let i = 0; i < data?.length; i += NumberOfPageContent) {
-            pages.push(data.slice(i, i + NumberOfPageContent));
+            pages.push({
+                id: i + 1,
+                datas: data.slice(i, i + NumberOfPageContent),
+            });
         }
 
         return { pages };
@@ -39,9 +43,10 @@ const Table = ({ table_data }) => {
                     //현재 페이지가 아니면 보여지지 않는 조건
                     if (idx + 1 === currentTable) {
                         return (
-                            <React.Fragment key={idx}>
-                                {page.map((table_datas: TableBodyRowProps) => (
+                            <React.Fragment key={page.id}>
+                                {page.datas.map((table_datas: TableBodyRowProps) => (
                                     <TableBodyRow
+                                        key={table_datas.cert_id}
                                         url={table_datas.url}
                                         certificate={table_datas.certificate}
                                         expiration_date={table_datas.expiration_date}
