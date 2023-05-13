@@ -4,6 +4,7 @@ import S from './index.styled';
 import React from 'react';
 import ProgressBar from '../../atoms/ProgressBar';
 import TableForm from '../../molecules/TableForm';
+import TableHeadRow from '../../molecules/TableHeadRow';
 
 const Table = () => {
     const [currentTable, setCurrentTable] = useState(1);
@@ -13,7 +14,7 @@ const Table = () => {
         { id: 2, title: 'Certificate' },
         { id: 3, title: 'Expiration Date' },
         { id: 4, title: 'Acitve' },
-        { id: 5 },
+        { id: 5, title: 'Progress' },
     ];
     const calculatePercentage = (created_at: string, expiration_date: string): number => {
         let percent = 0;
@@ -52,11 +53,7 @@ const Table = () => {
         <S.Table>
             {/* T-HEAD */}
             <thead>
-                <S.Thead.TR>
-                    {thead_items.map((item) => (
-                        <S.Thead.TH key={item.id}>{item.title}</S.Thead.TH>
-                    ))}
-                </S.Thead.TR>
+                <TableHeadRow />
             </thead>
 
             {/* T-BODY */}
