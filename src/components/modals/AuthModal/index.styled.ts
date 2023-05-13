@@ -17,7 +17,7 @@ const S = {
         border: 1px solid ${({ theme }) => theme.LIGHT.COLOR.GRAY};
         width: 500px;
         height: 800px;
-
+        z-index: 10;
         padding: 10em 10em;
         border-radius: 1em;
     `,

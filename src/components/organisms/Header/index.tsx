@@ -4,10 +4,18 @@ import Button from '../../atoms/Button';
 import Logo from '../../atoms/Logo';
 import Navigation from '../../molecules/Navigation';
 import S from './index.styled';
+import { useAppDispatch } from '../../../redux/hooks';
+import { toggleHeaderLoginButtonModal } from '../../../redux/features/modalSlice';
 
 const Header = () => {
     const router = useRouter();
     const active_link = router.asPath;
+
+    const dispatch = useAppDispatch();
+
+    const authModalToggle = () => {
+        dispatch(toggleHeaderLoginButtonModal());
+    };
     return (
         <S.Header>
             <S.HeaderContents>
@@ -23,7 +31,7 @@ const Header = () => {
 
                 {/* Button */}
                 <S.HeaderContent justify_content={'flex-end'}>
-                    <Button text={'LOGIN'} font_size="XL" outline={false} width={120} />
+                    <Button text={'LOGIN'} font_size="XL" outline={false} width={120} on_click={authModalToggle} />
                 </S.HeaderContent>
             </S.HeaderContents>
         </S.Header>
