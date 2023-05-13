@@ -15,8 +15,10 @@ const S = {
     AuthModal: styled.div`
         background-color: white;
         border: 1px solid ${({ theme }) => theme.LIGHT.COLOR.GRAY};
-        width: 400px;
-        height: 500px;
+        width: 500px;
+        height: 800px;
+
+        padding: 10em 10em;
         border-radius: 1em;
     `,
 };

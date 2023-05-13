@@ -13,6 +13,15 @@ const S = {
         color: ${({ theme }) => theme.LIGHT.COLOR.GRAY};
         text-align: center;
     `,
+
+    FormTitle: styled.h1`
+        font-weight: ${({ theme }) => theme.LIGHT.FONT_WEIGHT.LIGHT};
+        font-size: ${({ theme }) => theme.LIGHT.FONT_SIZE.XXXL};
+        color: ${({ theme }) => theme.LIGHT.COLOR.PRIMARY};
+        pointer-events: none;
+    `,
+
+    //SignUp Prompt
     SignUpPormpt: styled.div`
         display: flex;
         align-items: center;

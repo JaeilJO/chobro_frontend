@@ -6,6 +6,7 @@ import S from './index.styled';
 const LoginForm = () => {
     return (
         <S.LoginForm>
+            <S.FormTitle>LOGIN</S.FormTitle>
             {/* E-mail Input */}
             <AuthInput type="email" placeholder="E-mail" />
 
