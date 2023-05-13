@@ -38,7 +38,14 @@ const S = {
     Button: styled(CommonButtonStyle)<ButtonStyleProps>`
         color: ${({ theme }) => theme.LIGHT.COLOR.WHITE};
         background-color: ${({ theme }) => theme.LIGHT.COLOR.SECOND};
+        border: 1px solid ${({ theme }) => theme.LIGHT.COLOR.SECOND};
+    `,
+
+    LoadingButton: styled(CommonButtonStyle)<ButtonStyleProps>`
+        background-color: ${({ theme }) => theme.LIGHT.COLOR.GRAY};
+        color: ${({ theme }) => theme.LIGHT.COLOR.WHITE};
         border: none;
+        pointer-events: none;
     `,
 };
 

@@ -1,3 +1,4 @@
+import { useAppDispatch } from '../../../redux/hooks';
 import AuthInput from '../../atoms/AuthInput';
 import Button from '../../atoms/Button';
 import NavigationLink from '../../atoms/NavigationLink';
@@ -25,8 +26,8 @@ const SignUpForm = () => {
             <S.FormSeparator>or</S.FormSeparator>
 
             <S.SignUpPormpt>
-                <S.SignUpPormptText>Don't have an account?</S.SignUpPormptText>
-                <S.SignUpPormptButton>Sign up</S.SignUpPormptButton>
+                <S.SignUpPormptText>Do you already have an account?</S.SignUpPormptText>
+                <S.SignUpPormptButton>Login</S.SignUpPormptButton>
             </S.SignUpPormpt>
         </S.SignUpForm>
     );

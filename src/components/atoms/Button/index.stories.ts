@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
     args: {
         text: 'Button',
-        font_size: 'XXXL',
+        font_size: 'XXL',
     },
 };
 
@@ -24,5 +24,14 @@ export const OutLineButton: Story = {
     args: {
         text: 'OutLine',
         outline: true,
+        font_size: 'XXL',
+    },
+};
+
+export const IsLoadingButton: Story = {
+    args: {
+        text: 'OutLine',
+        font_size: 'XXL',
+        is_loading: true,
     },
 };

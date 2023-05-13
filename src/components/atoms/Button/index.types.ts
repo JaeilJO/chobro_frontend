@@ -7,5 +7,6 @@ export interface ButtonProps {
     text: string;
     outline: boolean;
     display?: 'block' | 'inline' | 'inline-block';
-    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    is_loading: boolean;
+    on_click?: React.MouseEventHandler<HTMLButtonElement>;
 }
