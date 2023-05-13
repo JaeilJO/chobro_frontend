@@ -1,6 +1,4 @@
 import jwt from 'jsonwebtoken';
-import { TableData } from '../components/Table/Table.types';
-import { v4 as uuidv4 } from 'uuid';
 
 // 토큰이 3분 이하로 남았는지 체크 해주는 함수
 export const isWithin3Minutes = (targetTime) => {
@@ -85,31 +83,6 @@ export const getRefreshTokenValue = (refresh: string) => {
     return match[2];
 };
 
-export const calculatePercentage = (created_at: string, expiration_date: string): number => {
-    let percent = 0;
-    let now = new Date().setHours(0, 0, 0);
-    const start = new Date(created_at as string).setHours(0, 0, 0);
-    const finish = new Date(expiration_date as string).setHours(0, 0, 0);
 
-    const totalDays = Math.floor((finish - start) / (1000 * 60 * 60 * 24)) + 1;
-    const startToNow = Math.floor((now - start) / (1000 * 60 * 60 * 24)) + 1;
-    percent = Math.floor((startToNow / totalDays) * 100);
 
-    if (percent > 100) {
-        percent = 100;
-    }
 
-    return percent;
-};
-
-export const makePages = (data: TableData[], NumberOfPageContent: number) => {
-    let pages = [];
-
-    for (let i = 0; i < data?.length; i += NumberOfPageContent) {
-        pages.push(data.slice(i, i + NumberOfPageContent));
-    }
-
-    return { pages };
-};
-
-export const generateUniqueId = () => uuidv4();
