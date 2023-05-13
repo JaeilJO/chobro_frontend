@@ -21,7 +21,7 @@ const SignUpForm = () => {
             <AuthInput type="password" placeholder="Password" />
 
             {/* Login Button */}
-            <Button font_size="XXL" text="SignUp" outline={false} />
+            <Button is_loading={false} font_size="XXL" text="SignUp" outline={false} />
 
             <S.FormSeparator>or</S.FormSeparator>
 
