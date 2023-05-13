@@ -1,10 +1,11 @@
-import { LogoProps } from './index.types';
+import { AuthInpuProps } from './index.types';
 import S from './index.styled';
 import { useRef, useState, useCallback } from 'react';
 
-const AuthInput = () => {
+const AuthInput = ({ type, placeholder }: AuthInpuProps) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [active, setActive] = useState(false);
+    let typeName: string;
 
     //Handler For
     const onFocus = useCallback(() => {
@@ -14,10 +15,21 @@ const AuthInput = () => {
         setActive(inputRef.current?.value !== '');
     }, []);
 
+    //Type
+
     return (
         <S.AuthInputBox>
-            <S.AuthLabel $active={active}>Hello</S.AuthLabel>
-            <S.AuthInput $active={active} ref={inputRef} onFocus={onFocus} onBlur={onBlur} />
+            <S.AuthLabel $active={active}>{placeholder}</S.AuthLabel>
+            <S.AuthInput
+                name={type}
+                id={type}
+                required
+                type={type}
+                $active={active}
+                ref={inputRef}
+                onFocus={onFocus}
+                onBlur={onBlur}
+            />
         </S.AuthInputBox>
     );
 };

@@ -14,6 +14,29 @@ export default meta;
 
 type Story = StoryObj<typeof AuthInput>;
 
-export const Default: Story = {
-    args: {},
+export const EmailInput: Story = {
+    args: {
+        type: 'email',
+        placeholder: 'E-mail',
+    },
+};
+
+export const passwordInput: Story = {
+    args: {
+        type: 'password',
+        placeholder: 'Password',
+    },
+};
+
+export const ChekcingClickAction: Story = {
+    args: {
+        type: 'email',
+        placeholder: 'E-mail',
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+        const label = await canvas.getByText('E-mail');
+        userEvent.click(await canvas.getByRole('textbox'));
+        expect(label).toHaveStyle(`font-size:15px`);
+    },
 };

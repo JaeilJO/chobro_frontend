@@ -16,6 +16,7 @@ const S = {
         top: ${({ $active }) => ($active ? `-1rem` : `1rem`)};
         left: 1rem;
         color: ${({ theme, $active }) => ($active ? theme.LIGHT.COLOR.PRIMARY : theme.LIGHT.COLOR.GRAY)};
+        transition: 280ms;
     `,
     AuthInput: styled.input<AuthInputProps>`
         width: 100%;
@@ -28,7 +29,7 @@ const S = {
 
         font-size: ${({ theme }) => theme.LIGHT.FONT_SIZE.LG};
         font-weight: ${({ theme }) => theme.LIGHT.FONT_WEIGHT.LIGHT};
-
+        transition: 280ms;
         &:focus {
             outline: none;
         }
