@@ -33,7 +33,7 @@ const SignUpForm = () => {
         if ('data' in res) {
             dispatch(changeMode('login'));
         } else {
-            console.log('실패');
+            throw new Error('회원가입안됨')
         }
     };
     return (

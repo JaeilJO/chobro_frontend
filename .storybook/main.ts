@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs';
+
 const config: StorybookConfig = {
     stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
@@ -13,8 +14,15 @@ const config: StorybookConfig = {
         options: {},
     },
 
-    docs: {
-        autodocs: 'tag',
+    webpackFinal: async (config) => {
+        if (config.resolve) {
+            config.resolve.fallback = {
+                path: require.resolve('path-browserify'),
+            };
+        }
+
+        return config;
     },
 };
+
 export default config;

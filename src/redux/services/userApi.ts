@@ -23,9 +23,18 @@ export const userApi = createApi({
         }),
 
         //endpoint : /cert
-        getCert: builder.query({
+        getActiveCert: builder.query({
             query: (accessToken) => ({
-                url: `cert`,
+                url: `cert/active`,
+                headers: {
+                    Authorization: `bearer ${accessToken}`,
+                },
+            }),
+        }),
+
+        getInactiveCert: builder.query({
+            query: (accessToken) => ({
+                url: `cert/inactive`,
                 headers: {
                     Authorization: `bearer ${accessToken}`,
                 },
@@ -60,4 +69,10 @@ export const userApi = createApi({
     }),
 });
 
-export const { useSignUpMutation, useGetCertQuery, usePatchCertMutation, usePostCertMutation } = userApi;
+export const {
+    useSignUpMutation,
+    useGetActiveCertQuery,
+    useGetInactiveCertQuery,
+    usePatchCertMutation,
+    usePostCertMutation,
+} = userApi;

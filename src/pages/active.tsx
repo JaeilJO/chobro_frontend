@@ -8,15 +8,21 @@ import AuthModal from '../components/modals/AuthModal';
 import { wrapper } from '../redux/store';
 import { authApi } from '../redux/services/authApi';
 import { setUser } from '../redux/features/userSlice';
+import { useGetActiveCertQuery } from '../redux/services/userApi';
 
 const Active: NextPage = () => {
     const dispatch = useAppDispatch();
     const authMode = useAppSelector((state) => state.modal.authMode);
     const headerLoginButtonModal = useAppSelector((state) => state.modal.headerLoginButtonModal);
+
+    const accessToken: string = useAppSelector((state) => state.user.token);
+
+    const { data } = useGetActiveCertQuery(accessToken, { skip: !accessToken });
+
     return (
         <>
             <Header />
-            <Main main_title="Active Access Certificate" table_data={TableMockDatas} />
+            <Main main_title="Active Access Certificate" table_data={data} />
 
             {}
             {headerLoginButtonModal ? <AuthModal mode={authMode} /> : null}
