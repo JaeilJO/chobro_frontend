@@ -8,7 +8,7 @@ import TableHeadRow from '../../molecules/TableHeadRow';
 import TableBodyRow from '../../molecules/TableBodyRow';
 import { TableBodyRowProps } from '../../molecules/TableBodyRow/index.types';
 
-const Table = () => {
+const Table = ({ table_data }) => {
     const [currentTable, setCurrentTable] = useState(1);
 
     const makePages = (data: any, NumberOfPageContent: any) => {
@@ -22,7 +22,7 @@ const Table = () => {
     };
 
     const NumberOfPageContent = 10;
-    const { pages } = makePages(TableMockDatas, NumberOfPageContent);
+    const { pages } = makePages(table_data, NumberOfPageContent);
 
     return (
         <S.Table>

@@ -12,6 +12,7 @@ const TableBodyRow = ({
     created_at,
     updated_at,
 }: TableBodyRowProps) => {
+    //percent 계산
     const calculatePercentage = (created_at: string, expiration_date: string): number => {
         let percent = 0;
         let now = new Date().setHours(0, 0, 0);
