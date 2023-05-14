@@ -23,7 +23,7 @@ const darkTheme = {};
 const defaultTheme = {
     FONT_SIZE: {
         SM: '0.8rem',
-        MD: '1rem',
+        M: '1rem',
         L: '1.5rem',
         XL: '2rem',
         XXL: '2.5rem',
