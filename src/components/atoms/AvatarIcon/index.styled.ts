@@ -1,14 +1,14 @@
 import { styled } from 'styled-components';
 import { FontSizeType } from '../../../styles/theme';
 
-interface AvatraPorps {
+interface AvatarIconPorps {
     width?: number;
     height?: number;
     font_size?: FontSizeType;
 }
 
 const S = {
-    Avatar: styled.button<AvatraPorps>`
+    AvatarIcon: styled.button<AvatarIconPorps>`
         width: ${({ width = 50 }) => width}px;
         height: ${({ height = 50 }) => height}px;
         font-size: ${({ theme, font_size = 'XXXL' }) => theme.LIGHT.FONT_SIZE[font_size]};
