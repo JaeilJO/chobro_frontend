@@ -28,6 +28,7 @@ export const OutLineButton: Story = {
 
 export const IsLoadingButton: Story = {
   args: {
+    text: "Is Loading",
     font_size: "XXL",
     is_loading: true,
   },
