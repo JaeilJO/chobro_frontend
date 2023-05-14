@@ -6,11 +6,13 @@ import Navigation from '../../molecules/Navigation';
 import S from './index.styled';
 import { useAppDispatch } from '../../../redux/hooks';
 import { toggleHeaderLoginButtonModal } from '../../../redux/features/modalSlice';
+import { HeaderProps } from './index.types';
+import Avatar from '../../atoms/Avatar';
 
-const Header = () => {
+const Header = ({ isLoggedIn, username }: HeaderProps) => {
     const router = useRouter();
     const active_link = router.asPath;
-
+    console.log(username);
     const dispatch = useAppDispatch();
 
     const authModalToggle = () => {
@@ -31,7 +33,11 @@ const Header = () => {
 
                 {/* Button */}
                 <S.HeaderContent justify_content={'flex-end'}>
-                    <Button text={'LOGIN'} font_size="XL" outline={false} width={120} on_click={authModalToggle} />
+                    {isLoggedIn ? (
+                        <Avatar username={username} />
+                    ) : (
+                        <Button text={'LOGIN'} font_size="XL" outline={false} width={120} on_click={authModalToggle} />
+                    )}
                 </S.HeaderContent>
             </S.HeaderContents>
         </S.Header>

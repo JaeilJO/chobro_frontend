@@ -17,10 +17,11 @@ const config: StorybookConfig = {
     webpackFinal: async (config) => {
         if (config.resolve) {
             config.resolve.fallback = {
-                path: require.resolve('path-browserify'),
+                ...config.resolve?.fallback,
+                crypto: require.resolve('crypto-browserify'),
+                stream: require.resolve('stream-browserify'),
             };
         }
-
         return config;
     },
 };

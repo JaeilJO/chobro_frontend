@@ -11,20 +11,19 @@ import { setUser } from '../redux/features/userSlice';
 import { useGetActiveCertQuery } from '../redux/services/userApi';
 
 const Active: NextPage = () => {
-    const dispatch = useAppDispatch();
     const authMode = useAppSelector((state) => state.modal.authMode);
     const headerLoginButtonModal = useAppSelector((state) => state.modal.headerLoginButtonModal);
-
     const accessToken: string = useAppSelector((state) => state.user.token);
-
     const { data } = useGetActiveCertQuery(accessToken, { skip: !accessToken });
+
+    const isLoggedIn = useAppSelector((state) => state.user.isLoggedIn);
+    const username = useAppSelector((state) => state.user.userName);
 
     return (
         <>
-            <Header />
+            <Header isLoggedIn={isLoggedIn} username={username} />
             <Main main_title="Active Access Certificate" table_data={data} />
 
-            {}
             {headerLoginButtonModal ? <AuthModal mode={authMode} /> : null}
         </>
     );
