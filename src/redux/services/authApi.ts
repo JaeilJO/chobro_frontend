@@ -41,11 +41,8 @@ export const authApi = createApi({
 
         //endPoint: /logout
         logout: builder.query({
-            query: (refreshToken) => ({
+            query: () => ({
                 url: `logout`,
-                headers: {
-                    Authorization: `Bearer ${refreshToken}`,
-                },
             }),
         }),
 

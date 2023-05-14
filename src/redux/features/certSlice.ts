@@ -46,10 +46,13 @@ export const certSlice = createSlice({
         getActiveCert: (state, action) => {
             state.activeCert.push(action.payload);
         },
+        getInctiveCert: (state, action) => {
+            state.inactiveCert.push(action.payload);
+        },
     },
 });
 
 // Action creators are generated for each case reducer function
-export const { getActiveCert } = certSlice.actions;
+export const { getActiveCert, getInctiveCert } = certSlice.actions;
 
 export default certSlice.reducer;

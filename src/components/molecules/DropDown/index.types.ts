@@ -6,6 +6,7 @@ interface DropDownProps {
 interface DropDownData {
     id: number;
     text: string;
+    type: string;
     on_click?: React.MouseEventHandler<HTMLButtonElement>;
 }
 

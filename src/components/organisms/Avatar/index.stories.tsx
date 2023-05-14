@@ -15,8 +15,6 @@ export default meta;
 
 type Story = StoryObj<typeof Avatar>;
 
-const MockOnClick = () => {};
-
 export const Default: Story = {
     args: {
         username: 'Kim',
@@ -24,4 +22,11 @@ export const Default: Story = {
         avataricon_font_size: 'XXXL',
         dropdown_toggle: true,
     },
+    decorators: [
+        (Story) => (
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
+                <Story />
+            </div>
+        ),
+    ],
 };

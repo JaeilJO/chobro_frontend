@@ -3,25 +3,37 @@ import Header from '../components/organisms/Header';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
 import Main from '../components/organisms/Main';
-
+import TableMockDatas from '../components/organisms/Table/TableMockDatas';
+import AuthModal from '../components/modals/AuthModal';
 import { wrapper } from '../redux/store';
 import { authApi } from '../redux/services/authApi';
 import { setUser } from '../redux/features/userSlice';
 import { useGetInactiveCertQuery } from '../redux/services/userApi';
+import { useEffect } from 'react';
+import { getInctiveCert } from '../redux/features/certSlice';
 
 const Active: NextPage = () => {
-    const dispatch = useAppDispatch();
     const authMode = useAppSelector((state) => state.modal.authMode);
     const headerLoginButtonModal = useAppSelector((state) => state.modal.headerLoginButtonModal);
-
     const accessToken: string = useAppSelector((state) => state.user.token);
+    const dispatch = useAppDispatch();
+    const isLoggedIn = useAppSelector((state) => state.user.isLoggedIn);
+    const username = useAppSelector((state) => state.user.userName);
+    const { isLoading, isSuccess, data } = useGetInactiveCertQuery(accessToken, { skip: !accessToken });
 
-    const { data } = useGetInactiveCertQuery(accessToken, { skip: !accessToken });
+    useEffect(() => {
+        if (isSuccess) {
+            dispatch(getInctiveCert(data));
+        }
+    }, [isSuccess, data]);
 
     return (
         <>
-            <Header />
-            <Main main_title="Inactive Access Certificate" table_data={data} />
+            <Header isLoggedIn={isLoggedIn} username={username} />
+
+            <Main main_title="Inctive Access Certificate" table_data={data} />
+
+            {!isLoggedIn && headerLoginButtonModal ? <AuthModal mode={authMode} /> : null}
         </>
     );
 };
