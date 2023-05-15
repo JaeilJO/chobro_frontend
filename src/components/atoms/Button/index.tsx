@@ -9,7 +9,7 @@ const Button = ({
     outline = false,
     on_click,
     display,
-    type,
+    type = 'primary',
     is_loading = false,
 }: ButtonProps) => {
     //Loading Button

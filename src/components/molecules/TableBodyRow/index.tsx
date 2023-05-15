@@ -41,7 +41,13 @@ const TableBodyRow = ({
             <S.TableBodyData>{expiration_date}</S.TableBodyData>
 
             <S.TableBodyData text_align="center">
-                <Button font_size={'MD'} text={is_active ? 'Active' : 'InActive'} outline={false} is_loading={false} />
+                <Button
+                    font_size={'M'}
+                    text={is_active ? 'Active' : 'InActive'}
+                    outline={false}
+                    is_loading={false}
+                    type={is_active ? 'primary' : 'gray'}
+                />
             </S.TableBodyData>
 
             <S.TableBodyData width={300} text_align="center">

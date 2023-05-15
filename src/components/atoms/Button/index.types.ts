@@ -9,5 +9,5 @@ export interface ButtonProps {
     display?: 'block' | 'inline' | 'inline-block';
     is_loading?: boolean;
     on_click?: React.MouseEventHandler<HTMLButtonElement>;
-    type: 'gray' | 'primary';
+    type?: 'gray' | 'primary';
 }

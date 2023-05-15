@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
-import Button from ".";
+import Button from '.';
 
 const meta: Meta<typeof Button> = {
-  title: "Atoms/Button",
-  component: Button,
+    title: 'Atoms/Button',
+    component: Button,
 };
 
 export default meta;
@@ -12,24 +12,33 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  args: {
-    text: "Button",
-    font_size: "XXL",
-  },
+    args: {
+        text: 'Button',
+        font_size: 'XXL',
+    },
 };
 
 export const OutLineButton: Story = {
-  args: {
-    text: "OutLine",
-    outline: true,
-    font_size: "XXL",
-  },
+    args: {
+        text: 'OutLine',
+        outline: true,
+        font_size: 'XXL',
+    },
+};
+
+export const GrayButton: Story = {
+    args: {
+        text: 'OutLine',
+
+        font_size: 'XXL',
+        type: 'gray',
+    },
 };
 
 export const IsLoadingButton: Story = {
-  args: {
-    text: "Is Loading",
-    font_size: "XXL",
-    is_loading: true,
-  },
+    args: {
+        text: 'Is Loading',
+        font_size: 'XXL',
+        is_loading: true,
+    },
 };
