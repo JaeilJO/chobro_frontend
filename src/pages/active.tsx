@@ -11,6 +11,7 @@ import { setUser } from '../redux/features/userSlice';
 import { useGetActiveCertQuery } from '../redux/services/userApi';
 import { getActiveCert } from '../redux/features/certSlice';
 import { useEffect } from 'react';
+import ActiveButtonModal from '../components/modals/ActivButtonModal';
 
 const Active: NextPage = () => {
     const dispatch = useAppDispatch();
@@ -20,6 +21,7 @@ const Active: NextPage = () => {
 
     const isLoggedIn = useAppSelector((state) => state.user.isLoggedIn);
     const username = useAppSelector((state) => state.user.userName);
+    const tableActiveModal = useAppSelector((state) => state.modal.tableActiveModal.toggle_status);
 
     const { isLoading, isSuccess, data } = useGetActiveCertQuery(accessToken, { skip: !accessToken });
 
@@ -33,6 +35,7 @@ const Active: NextPage = () => {
         <>
             <Header isLoggedIn={isLoggedIn} username={username} />
             <Main main_title="Active Access Certificate" table_data={data} />
+            {!isLoggedIn && tableActiveModal ? <ActiveButtonModal /> : null}
 
             {!isLoggedIn && headerLoginButtonModal ? <AuthModal mode={authMode} /> : null}
         </>

@@ -34,7 +34,7 @@ const TableForm = () => {
             </S.TableFormTd>
             <S.TableFormTd>
                 <Button
-                    font_size={'LG'}
+                    font_size={'L'}
                     text={'Submit'}
                     outline={false}
                     is_loading={false}

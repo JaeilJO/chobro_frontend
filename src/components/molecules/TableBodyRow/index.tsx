@@ -1,3 +1,5 @@
+import { openToggleTableActiveModal } from '../../../redux/features/modalSlice';
+import { useAppDispatch } from '../../../redux/hooks';
 import Button from '../../atoms/Button';
 import ProgressBar from '../../atoms/ProgressBar';
 import S from './index.styled';
@@ -31,6 +33,17 @@ const TableBodyRow = ({
     };
 
     const percentage = calculatePercentage(created_at, expiration_date);
+    const dispatch = useAppDispatch();
+
+    const handleActiveModal = () => {
+        dispatch(
+            openToggleTableActiveModal({
+                is_active,
+                url,
+                cert_id,
+            })
+        );
+    };
 
     return (
         <S.TableBodyRow>
@@ -47,6 +60,7 @@ const TableBodyRow = ({
                     outline={false}
                     is_loading={false}
                     type={is_active ? 'primary' : 'gray'}
+                    on_click={handleActiveModal}
                 />
             </S.TableBodyData>
 
