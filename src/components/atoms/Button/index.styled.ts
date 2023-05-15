@@ -18,10 +18,6 @@ const CommonButtonStyle = styled.button<ButtonStyleProps>`
     transition: 280ms;
     cursor: pointer;
     display: ${({ display }) => display};
-
-    &:hover {
-        background-color: ${({ theme }) => theme.LIGHT.COLOR.SECOND_FOCUS};
-    }
 `;
 
 const S = {
@@ -39,6 +35,18 @@ const S = {
         color: ${({ theme }) => theme.LIGHT.COLOR.WHITE};
         background-color: ${({ theme }) => theme.LIGHT.COLOR.SECOND};
         border: 1px solid ${({ theme }) => theme.LIGHT.COLOR.SECOND};
+        &:hover {
+            background-color: ${({ theme }) => theme.LIGHT.COLOR.SECOND_FOCUS};
+        }
+    `,
+
+    GrayButton: styled(CommonButtonStyle)<ButtonStyleProps>`
+        color: ${({ theme }) => theme.LIGHT.COLOR.BLACK};
+        background-color: ${({ theme }) => theme.LIGHT.COLOR.GRAY};
+        border: 1px solid ${({ theme }) => theme.LIGHT.COLOR.GRAY};
+        &:hover {
+            background-color: ${({ theme }) => theme.LIGHT.COLOR.GRAY_FOCUS};
+        }
     `,
 
     LoadingButton: styled(CommonButtonStyle)<ButtonStyleProps>`

@@ -11,6 +11,7 @@ const lightTheme = {
     THIRD: '#BEDAEF',
     BLACK: '#2F2F2F',
     GRAY: '#F0F0F0',
+    GRAY_FOCUS: '#d1d1d1',
     DANGER: '#FF8181',
     WARNING: '#FFBD3C',
     WHITE: '#FFFFFF',
